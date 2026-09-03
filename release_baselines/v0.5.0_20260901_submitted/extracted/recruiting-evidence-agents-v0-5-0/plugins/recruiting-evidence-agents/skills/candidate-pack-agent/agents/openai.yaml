@@ -1,0 +1,4 @@
+interface:
+  display_name: "Candidate Pack Agent"
+  short_description: "Create evidence-bound outputs from a structured material handoff."
+  default_prompt: "Use $candidate-pack-agent to create evidence-bound outputs from the materials.zip handoff."

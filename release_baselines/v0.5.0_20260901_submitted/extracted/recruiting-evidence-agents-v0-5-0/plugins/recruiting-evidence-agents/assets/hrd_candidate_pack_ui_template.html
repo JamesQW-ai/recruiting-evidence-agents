@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>HRD 候选人意见包</title>
+  <style>
+    :root { color: #1f2937; background: #eef2f3; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    * { box-sizing: border-box; } body { margin: 0; } main { margin: 0 auto; max-width: 1120px; padding: 34px 28px 50px; }
+    .report-header { align-items: end; border-bottom: 1px solid #cbd5d9; display: flex; gap: 28px; justify-content: space-between; padding-bottom: 22px; } .eyebrow { color: #0f766e; font-size: 13px; font-weight: 700; margin: 0 0 8px; } h1 { font-size: 30px; margin: 0; } h2 { font-size: 18px; margin: 0; } .header-note, .report-state, .section-note { color: #55646d; font-size: 13px; line-height: 1.55; } .report-state { margin: 0; text-align: right; }
+    .batch-bar { background: #163c43; color: #fff; display: flex; font-size: 14px; justify-content: space-between; margin-top: 18px; padding: 12px 16px; } .section { margin-top: 30px; } .section-heading { align-items: baseline; display: flex; gap: 14px; justify-content: space-between; margin-bottom: 12px; }
+    .executive-summary { background: #e7f4f0; border-left: 4px solid #0f766e; font-size: 15px; line-height: 1.65; margin: 0; padding: 14px 16px; } .metric-grid { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 14px; } .metric { background: #fff; border: 1px solid #d3dee1; border-top: 4px solid #78909c; min-height: 122px; padding: 15px; } .metric span, .metric small { color: #5d6c72; display: block; font-size: 12px; line-height: 1.45; } .metric strong { color: #153b42; display: block; font-size: 29px; margin: 8px 0; } .metric.is-positive { border-top-color: #15803d; } .metric.is-caution { border-top-color: #b45309; }
+    .funnel { background: #fff; border: 1px solid #d3dee1; padding: 18px; } .funnel-step { align-items: center; display: grid; gap: 16px; grid-template-columns: 150px minmax(0, 1fr) 76px; padding: 11px 0; } .funnel-label { color: #24353b; font-size: 14px; font-weight: 700; } .funnel-track { background: #e6edef; height: 20px; overflow: hidden; position: relative; } .funnel-track i { background: #15803d; display: block; height: 100%; min-width: 28px; width: var(--funnel-width); } .stage-2 .funnel-track i { background: #238c68; } .stage-3 .funnel-track i { background: #367a94; } .stage-4 .funnel-track i { background: #183c43; } .funnel-value { align-items: baseline; display: flex; gap: 6px; justify-content: end; } .funnel-value strong { color: #183c43; font-size: 20px; } .funnel-value small { color: #64748b; font-size: 12px; }
+    .opinion-group { background: #fff; border: 1px solid #d3dee1; margin-bottom: 14px; } .opinion-group h3 { background: #eaf6f0; color: #14532d; font-size: 15px; margin: 0; padding: 11px 14px; } .opinion-group.is-negative h3 { background: #fff4e5; color: #8a4c09; } .opinion-card { border-top: 1px solid #e6edef; padding: 14px; } .opinion-card:first-of-type { border-top: 0; } .opinion-card h4 { font-size: 15px; margin: 0 0 6px; } .opinion-card p { line-height: 1.65; margin: 0; } .opinion-label { color: #54666c; font-size: 12px; font-weight: 700; }
+    .material-limits { background: #fffbeb; border: 1px solid #ead5aa; color: #634a16; line-height: 1.55; padding: 13px 15px; } .operations-note { background: #f8fafc; border: 1px solid #d3dee1; color: #475569; font-size: 13px; line-height: 1.55; padding: 13px 15px; } footer { border-top: 1px solid #d3dee1; color: #64748b; font-size: 12px; line-height: 1.5; margin-top: 32px; padding-top: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="report-header"><div><p class="eyebrow">招聘审核交付</p><h1>HRD 候选人意见包</h1><p class="header-note">仅呈现已确认保存的 HRD 审核意见，供 CEO 审阅；不构成 CEO 最终决策。</p></div><p class="report-state">材料快照：{{CAPTURED_AT}}<br>生成时间：{{GENERATED_AT}}</p></header>
+    <section class="batch-bar"><span>批次：{{BATCH_LABEL}}</span><span>材料门禁：已关闭</span></section>
+    <section class="section"><div class="section-heading"><h2>批次概览</h2></div><p class="executive-summary">{{EXECUTIVE_SUMMARY}}</p><div class="metric-grid">{{METRIC_CARDS}}</div></section>
+    <section class="section"><div class="section-heading"><h2>流程漏斗</h2><p class="section-note">通过人数均以本批候选人为分母。</p></div><div class="funnel">{{FUNNEL_STAGES}}</div></section>
+    <section class="section"><div class="section-heading"><h2>HRD 已保存意见</h2><p class="section-note">只包含本次提交范围内、当前仍为 HRD 面试通过且三字段完整的候选人。</p></div>{{OPINION_GROUPS}}</section>
+    <section class="section"><div class="section-heading"><h2>Confirmed Missing 限制</h2></div><div class="material-limits">{{CONFIRMED_MISSING}}</div></section>
+    <section class="section"><div class="section-heading"><h2>重复提交历史</h2></div><div class="operations-note">{{DUPLICATE_HISTORY}}</div></section>
+    <footer>CEO 收件内容仅为消息正文、candidate_pack.html 与 materials.zip。本页面不含 Base 链接、令牌、稳定内部编号或 CEO 决策。</footer>
+  </main>
+</body>
+</html>

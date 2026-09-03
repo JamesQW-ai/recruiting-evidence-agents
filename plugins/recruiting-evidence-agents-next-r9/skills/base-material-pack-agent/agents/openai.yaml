@@ -1,0 +1,4 @@
+interface:
+  display_name: "Base Material Pack Agent"
+  short_description: "Read an authorized Feishu Base into a replayable, evidence-bound material handoff."
+  default_prompt: "Use $base-material-pack-agent to read the authorized Feishu Base URL without modifying it, create a local snapshot, and build the material handoff."

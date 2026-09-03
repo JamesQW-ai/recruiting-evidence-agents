@@ -1,0 +1,4 @@
+interface:
+  display_name: "HRD 审核与 CEO 交付"
+  short_description: "以对话完成 HRD 意见确认、CEO 包预览与显式投递。"
+  default_prompt: "从当前 Base 交接开始 HRD 审核，并在确认后生成 CEO 交付预览。"

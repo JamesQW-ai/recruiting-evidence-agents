@@ -1,0 +1,4 @@
+interface:
+  display_name: "补件催办与增量重建 Agent"
+  short_description: "生成缺件催办草稿，并在新 Base 附件核验后提示重建。"
+  default_prompt: "Use $follow-up-incremental-pack-agent with a completed Base snapshot to draft missing-material follow-ups without sending messages or modifying the Base."

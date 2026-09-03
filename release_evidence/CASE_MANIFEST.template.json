@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {"id": "KN-001", "kind": "Known", "evidence": ["known/KN-001.md"]},
+    {"id": "KN-002", "kind": "Known", "evidence": ["known/KN-002.md"]},
+    {"id": "KN-003", "kind": "Known", "evidence": ["known/KN-003.md"]},
+    {"id": "KN-004", "kind": "Known", "evidence": ["known/KN-004.md"]},
+    {"id": "KN-005", "kind": "Known", "evidence": ["known/KN-005.md"]},
+    {"id": "KN-006", "kind": "Known", "evidence": ["known/KN-006.md"]},
+    {"id": "KN-007", "kind": "Known", "evidence": ["known/KN-007.md"]},
+    {"id": "KN-008", "kind": "Known", "evidence": ["known/KN-008.md"]},
+    {"id": "KN-009", "kind": "Known", "evidence": ["known/KN-009.md"]},
+    {"id": "KN-010", "kind": "Known", "evidence": ["known/KN-010.md"]},
+    {"id": "KN-011", "kind": "Known", "evidence": ["known/KN-011.md"]},
+    {"id": "KN-012", "kind": "Known", "evidence": ["known/KN-012.md"]},
+    {"id": "HO-001", "kind": "Holdout", "evidence": ["holdout/HO-001.md"]},
+    {"id": "HO-002", "kind": "Holdout", "evidence": ["holdout/HO-002.md"]},
+    {"id": "HO-003", "kind": "Holdout", "evidence": ["holdout/HO-003.md"]},
+    {"id": "HO-004", "kind": "Holdout", "evidence": ["holdout/HO-004.md"]}
+  ]
+}

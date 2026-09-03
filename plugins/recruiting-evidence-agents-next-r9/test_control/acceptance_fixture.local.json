@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_url": "https://laientech.feishu.cn/base/TY0Sb7sT4aqMeesjrsrcx0OvnLh?table=tblx03RTNHXYO17U&view=vewsVd9ZmY",
+  "table_id": "tblx03RTNHXYO17U",
+  "batch": "Batch 1",
+  "test_account": "james@laiena.io",
+  "allowed_base_writes": ["处理状态", "HRD录用建议", "HRD审核意见", "HRD意见状态"],
+  "forbidden_base_writes": ["CEO最终决策"],
+  "fixture_cases": {
+    "replenishable_missing": {
+      "record_id": "recvsIwJSXpB9y",
+      "candidate": "张三",
+      "field": "HRD面试材料",
+      "component": "面试转写",
+      "expected_attachment": "张三_2026.08.08_HRD面试录音_1100.mp3"
+    },
+    "unmapped_material": {
+      "record_id": "recvsIwJSXVtuP",
+      "candidate": "陈晓彤",
+      "field": "技术面试材料",
+      "expected_attachment": "补件测试_候选人无法确认_技术面试转写_20260821.md"
+    },
+    "invalid_extra": {
+      "record_id": "recvsIwJSXHq6V",
+      "candidate": "孙明远",
+      "field": "BP面试材料",
+      "expected_attachment": "张三_BP面试转写_无效文件测试_20260821.pdf"
+    },
+    "confirmed_missing": {
+      "record_id": "recvsIwJSXWUDM",
+      "candidate": "杜文博",
+      "field": "BP面试材料",
+      "component": "面试转写",
+      "reply": "确认无法提供",
+      "expected_attachment": "杜文博-BP面试录音文件_10点00-2026.08.06.mp3"
+    }
+  },
+  "reset_assertions": {
+    "all_four_writable_fields_empty": true,
+    "fixture_cases_match_expected_attachments": true
+  }
+}

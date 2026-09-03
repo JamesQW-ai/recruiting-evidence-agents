@@ -1,0 +1,20 @@
+{
+  "name": "recruiting-evidence-macos",
+  "interface": {
+    "displayName": "Recruiting Evidence macOS"
+  },
+  "plugins": [
+    {
+      "name": "recruiting-evidence-agents",
+      "source": {
+        "source": "local",
+        "path": "./plugins/recruiting-evidence-agents"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

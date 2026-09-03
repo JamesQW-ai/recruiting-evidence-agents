@@ -1,0 +1,4 @@
+interface:
+  display_name: "Material Pack Agent"
+  short_description: "Structure a flat material repository and package it without rewriting sources."
+  default_prompt: "Use $material-pack-agent to structure the authorized flat material repository, verify audio with transient local transcription, and create materials.zip."

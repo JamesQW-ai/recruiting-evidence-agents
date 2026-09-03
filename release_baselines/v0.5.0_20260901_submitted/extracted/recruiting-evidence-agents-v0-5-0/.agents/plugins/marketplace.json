@@ -1,0 +1,20 @@
+{
+  "name": "recruiting-evidence-agents-v0-5-0-marketplace",
+  "interface": {
+    "displayName": "recruiting-evidence-agents-v0-5-0-marketplace"
+  },
+  "plugins": [
+    {
+      "name": "recruiting-evidence-agents",
+      "source": {
+        "source": "local",
+        "path": "./plugins/recruiting-evidence-agents"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

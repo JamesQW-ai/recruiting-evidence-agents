@@ -1,0 +1,21 @@
+{
+  "name": "recruiting-evidence-agents-next-r9",
+  "version": "0.5.0-dev-r9",
+  "description": "Read-only intake, evidence-bound candidate packs, guided HRD opinion confirmation, and explicit CEO delivery.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Recruiting Evidence Agents",
+    "shortDescription": "从材料交接到 HRD 审核与 CEO 显式交付的证据包。",
+    "longDescription": "提供只读 Feishu Base 快照、平面材料整理、证据包生成，以及面向 HRD 的意见确认和 CEO 投递预览流程。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": "请从我提供的 Feishu Base 链接开始招聘材料核验；材料门禁关闭后，引导我确认 HRD 意见并预览 CEO 交付。"
+  }
+}

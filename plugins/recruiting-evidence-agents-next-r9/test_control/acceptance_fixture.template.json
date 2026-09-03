@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "purpose": "Real acceptance fixture control. Keep actual Base identifiers and test-account values only in a local, non-distributed copy.",
+  "base_url": "Not Configured",
+  "table_id": "Not Configured",
+  "batch": "Not Configured",
+  "test_account": "Not Configured",
+  "allowed_base_writes": ["处理状态", "HRD录用建议", "HRD审核意见", "HRD意见状态"],
+  "forbidden_base_writes": ["CEO最终决策"],
+  "required_scenarios": ["all_replies_refresh", "partial_reply_timeout", "confirmed_missing", "watcher_failure"],
+  "confirmed_missing": {
+    "initial_state": "A recorded interview has a required material component absent.",
+    "reply": "确认无法提供",
+    "expected_status": "Confirmed Missing",
+    "expected_effect": "Stop follow-up, retain a visible limitation, allow CEO informed review, and do not mark the material complete."
+  },
+  "reset_assertions": {
+    "four_writable_fields": "Read back exact initial values for every selected record.",
+    "attachments": "Read back the expected missing, invalid, duplicate, and confirmed-missing fixture attachments."
+  }
+}
